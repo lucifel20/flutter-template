@@ -12,16 +12,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: APP_TITLE,
       home: HomeRoute(
-        appTitle: APP_TITLE,
+        title: APP_TITLE,
       ),
     ); // MaterialApp()
   }
 }
 
 class HomeRoute extends StatefulWidget {
-  HomeRoute({Key key, this.appTitle}) : super(key: key);
+  HomeRoute({Key key, this.title}) : super(key: key);
 
-  final String appTitle;
+  final String title;
 
   @override
   _HomeRoute createState() => _HomeRoute();
@@ -32,7 +32,7 @@ class _HomeRoute extends State<HomeRoute> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.appTitle),
+        title: Text(widget.title),
         centerTitle: true,
       ), // AppBar()
       body: SafeArea(
